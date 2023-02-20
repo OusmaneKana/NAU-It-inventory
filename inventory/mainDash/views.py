@@ -9,3 +9,8 @@ def index(request):
         'latest_question_list': "Test Context",
     }
     return render(request, 'mainDash/index.html', context)
+def assigne_retrive(request):
+    context = {
+        'latest_question_list': "Test Context",
+    }
+    return render(request, 'mainDash/assigne_retrieve.html', context)
