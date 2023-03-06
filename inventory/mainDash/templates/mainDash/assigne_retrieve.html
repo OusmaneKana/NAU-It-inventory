@@ -78,46 +78,7 @@
                                 <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                             </nav>
                         </div>
-                        <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Authentication
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a> -->
+                       
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -130,57 +91,10 @@
             <div>
                 <div class="col-md-9 mx-auto me-5 mt-4">
                     <h1>Assignment or Retrieval</h1>
-                    <form class="row g-3">
-                        <div class="col-md-4">
-                            <label for="assigneeName" class="form-label">Assignee Name</label>
-                            <input type="text" class="form-control" id="assigneeName"  placeholder="Assignee Name">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="officeNumber" class="form-label">Office Number</label>
-                            <input type="text" class="form-control" id="officeNumber" placeholder="Office Number">
-                        </div>
-                        <div class="col-8">
-                            <label for="make" class="form-label">Make</label>
-                            <input type="text" class="form-control" id="make" placeholder="Make">
-                        </div>
-                        <div class="col-8">
-                            <label for="model" class="form-label">Model</label>
-                            <input type="text" class="form-control" id="model" placeholder="Model">
-                        </div>
-                        <div class="col-8">
-                            <label for="serialNumber" class="form-label">Serial Number</label>
-                            <input type="text" class="form-control" id="serialNumber" placeholder="Serial Number">
-                        </div>
-                        <!-- <div class="col-md-4">
-                              <label for="serialNumber" class="form-label">Serial Number</label>
-                              <input type="text" class="form-control" id="serialNumber">
-                            </div> -->
-                        <div class="row justify-content-start">
-                            <div class="col-md-4 mt-3">
-                                <label for="inputState" class="form-label">Assigne/Retrieve</label>
-                                <select id="inputState" class="form-select">
-                                    <option selected>Assigne</option>
-                                    <option>Retrieve</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 mt-3">
-                                <label for="inputZip" class="form-label">QTY</label>
-                                <input type="number" class="form-control" id="inputZip" placeholder="Quantity">
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
-                        </div>
-                    </form>
+                   <form action="" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                   </form>
                 </div>
             </div>
             <footer class="py-4 bg-light mt-auto">
