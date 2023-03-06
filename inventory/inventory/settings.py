@@ -80,13 +80,12 @@ WSGI_APPLICATION = 'inventory.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'NAU-IT',
-        'ENSURE_SCHEMA':False,
-        'CLIENT': 
-                    {
-                        'host': environ_variables["MongoCONNECTION_STRING"]
-                    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nauit',
+        'USER': 'postgres',
+        'PASSWORD':environ_variables['POSTGRE_PWD'],
+        'HOST':environ_variables['POSTGRE_HOST'],
+        'PORT': environ_variables['POSTGRE_PORT']
     }
 }
 
