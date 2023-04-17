@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,13 +90,24 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-            <div>
-                <div class="col-md-9 mx-auto me-5 mt-4">
+            <div class="container mt-3" style="width:95%; font-size: 14px">
+                
                     <h1>Assignment or Retrieval</h1>
-                   <form action="" method="post">
+                   <form action="" method="post" class="card p-3 mt-5">
                     {% csrf_token %}
-                    {{form.as_p}}
+                    {{form|crispy}}
+
+                    <button type="submite" class="btn btn-primary mt-5"> Submit</button>
                    </form>
+
+                   {%for message in messages%}
+                    {%if message.tags == 'success' %}
+                        <div id="alert alert-primary alert-dismissible fade show" role="alert">
+                            {{message}}
+                            <a href="{%url 'mainDash'%}" type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                        </div>
+                    {%endif%}
+                    {% endfor %}
                 </div>
             </div>
             <footer class="py-4 bg-light mt-auto">

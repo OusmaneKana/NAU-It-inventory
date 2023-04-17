@@ -10,10 +10,10 @@ class Device(models.Model):
     qty = models.IntegerField()
     price = models.IntegerField()
     sellers_origin = models.CharField(max_length= 50)
+    assignment_count = models.IntegerField( default=0)
 
     def __str__(self) -> str:
-        return self.make+" "+self.model
-
+        return self.make+"| "+self.model+"| "+self.serial_number
 
 class Record(models.Model):
     # id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

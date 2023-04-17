@@ -1,5 +1,11 @@
 from django import forms
 
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field
+from crispy_forms.bootstrap import AppendedText, PrependedText, FormActions
+
+
+
 from .models import Device, Record
 
 class DeviceRegistrationForm(forms.Form):
@@ -18,3 +24,5 @@ class RecordForm(forms.ModelForm):
     class Meta:
         model = Record
         fields = "__all__"
+
+        
